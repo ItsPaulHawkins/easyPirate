@@ -1,10 +1,13 @@
 import java.io.File;
 import java.io.IOException;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.jsoup.*;
 import org.jsoup.nodes.Document;
 import java.util.Scanner;
 import org.jsoup.select.Elements;
 import org.jsoup.nodes.Element;
+import java.io.PrintWriter;
 
 import javax.print.Doc;
 import java.util.ArrayList;
@@ -32,13 +35,10 @@ public class parser {
         Element link = magnetDoc.select("a").first();
         String relHref = link.attr("href"); // == "/"
     }
-    private static String trim(String s, int width) {
-        if (s.length() > width)
-            return s.substring(0, width-1) + ".";
-        else
-            return s;
-    }
-    private static void print(String msg, Object... args) {
-        System.out.println(String.format(msg, args));
+    public static void writeToFile(String mirror)throws IOException{
+        File writeHere = new File("mirror.txt");
+        PrintWriter writing = new PrintWriter(writeHere);
+        writing.print(mirror);
+        writing.close();
     }
 }
