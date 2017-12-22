@@ -1,4 +1,4 @@
-public class main {
+public class download {
     public static void main(String args[]){
         
     }
