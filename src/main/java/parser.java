@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.IOException;
-
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.jsoup.*;
 import org.jsoup.nodes.Document;
@@ -8,8 +7,6 @@ import java.util.Scanner;
 import org.jsoup.select.Elements;
 import org.jsoup.nodes.Element;
 import java.io.PrintWriter;
-
-import javax.print.Doc;
 import java.util.ArrayList;
 public class parser {
     public parser(){
